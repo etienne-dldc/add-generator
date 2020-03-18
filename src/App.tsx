@@ -67,6 +67,13 @@ function setStoreData(data: StoreData) {
   return store.set(STORAGE_KEY, data);
 }
 
+function isFacebookBrowser() {
+  const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
+  return ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1;
+}
+
+const IS_FACEBOOK_BROWSER = isFacebookBrowser();
+
 function App() {
   const [name, setName] = React.useState(() => getStoreData().name);
   const [birthdate, setBirthdate] = React.useState<string>(() => getStoreData().birthdate);
@@ -98,6 +105,23 @@ function App() {
   return (
     <div className="App">
       <h1 className="App--title">Attestation de Déplacement Dérogatoire</h1>
+      {IS_FACEBOOK_BROWSER && (
+        <div className="App--info">
+          <WarningIcon />
+          <p>
+            Vous utilisez actuellement le navigateur Facebook, ce site ne fonctionne pas
+            correctement au sein de ce navigateur ! Merci d'ouvrir Chrome sur Android ou bien Safari
+            sur iOS.
+          </p>
+        </div>
+      )}
+      <div className="App--info">
+        <WarningIcon />
+        <p>
+          Attention, vous devez imprimer vos attestations ! Les versions numériques ne sont pas
+          acceptées (vous ne pouvez donc pas sortir avec votre smartphone uniquement !)
+        </p>
+      </div>
       <TextInput
         name="full-name"
         label="Prénom, NOM"

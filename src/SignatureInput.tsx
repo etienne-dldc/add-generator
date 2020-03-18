@@ -105,7 +105,7 @@ export const SignatureInput: React.FC<Props> = ({ label, setSignature, signature
                   Envoyer une image
                 </button>
                 <button type="button" onClick={() => setMode('draw')}>
-                  Déssiner
+                  Dessiner
                 </button>
               </div>
             );

@@ -48,7 +48,7 @@ export interface Options {
 }
 
 export async function generateDocument(options: Options) {
-  const url = '/Attestation_de_deplacement_derogatoire.pdf';
+  const url = '/attestation_de_deplacement_derogatoire.pdf';
   const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
 
   // Load a PDFDocument from the existing PDF bytes
