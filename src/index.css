@@ -312,6 +312,7 @@ li {
   position: relative;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0.3rem 1rem;
@@ -335,6 +336,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  flex: 1;
 }
 
 .SignatureInput--back {
@@ -390,24 +392,14 @@ li {
 }
 
 .SignatureInput--remove {
-  position: absolute;
   font-family: 'Sen', sans-serif;
-  opacity: 0;
-  transition-duration: 0.3s;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
   border: none;
   font-size: 1rem;
   text-decoration: underline;
   cursor: pointer;
-  background: #f44336e6;
-  color: white;
+  color: #e53935;
+  background: none;
   font-weight: 700;
-}
-.SignatureInput--remove:hover {
-  opacity: 1;
 }
 
 .App--submit {

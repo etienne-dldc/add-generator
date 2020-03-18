@@ -127,6 +127,7 @@ export const SignatureInput: React.FC<Props> = ({ label, setSignature, signature
                         }
                         const data = padRef.current.toDataURL('image/png');
                         setSignature({ data, type: 'png' });
+                        setMode(null);
                       }
                     }}
                   >
