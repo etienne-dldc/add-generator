@@ -264,15 +264,58 @@ li {
 
 .SignatureInput--block {
   position: relative;
-  height: 5rem;
+  min-height: 10rem;
   background: #e3f2fd;
   border: 0.1rem solid #0288d1;
   border-radius: 0 1.5rem 1.5rem 1.5rem;
   font-size: 1rem;
   font-family: 'Sen', sans-serif;
   font-weight: 400;
-  padding: 0.3rem 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.SignatureInput--choice {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  flex: 1;
+}
+
+.SignatureInput--choice button {
+  flex: 1;
+  font-size: 1rem;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  background: none;
+  text-align: center;
+  background: #7986cb;
+  border: 0.1rem solid #0288d1;
+  color: white;
+  outline: none;
+  transition-duration: 0.1s;
+  border-radius: 0 1.5rem 1.5rem 1.5rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+.SignatureInput--choice button:last-child {
+  margin-top: 0;
+}
+.SignatureInput--choice button:hover {
+  border: 0.1rem solid #1a237e;
+  background: #1a237e;
+}
+
+.SignatureInput--center {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 1rem;
+  flex: 1;
 }
 
 .SignatureInput--drop {
@@ -284,6 +327,55 @@ li {
   text-align: center;
   line-height: 1.5rem;
   outline: none;
+  height: 100%;
+}
+
+.SignatureInput--tools {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.SignatureInput--back {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  justify-content: space-between;
+}
+
+.SignatureInput--back button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  background: none;
+  text-align: center;
+  background: #7986cb;
+  border: 0.1rem solid #0288d1;
+  color: white;
+  outline: none;
+  transition-duration: 0.1s;
+  border-radius: 0 1.5rem 1.5rem 1.5rem;
+  cursor: pointer;
+  margin: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.SignatureInput--back button:first-child {
+  padding-left: 0.5rem;
+}
+.SignatureInput--back button:hover {
+  border: 0.1rem solid #1a237e;
+  background: #1a237e;
+}
+
+.SignatureInput--back button svg {
+  margin-right: 0.5rem;
 }
 
 .SignatureInput--click {
@@ -373,4 +465,51 @@ li {
 .CheckBox span svg {
   width: 100%;
   height: 100%;
+}
+
+.SignaturePad {
+  display: flex;
+  padding: 0.5rem;
+  flex: 1;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.SignaturePad canvas {
+  background: white;
+  flex: 1;
+  border-radius: 0 1rem 1rem 1rem;
+}
+
+.SignaturePad--buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.SignaturePad--clear {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+
+.SignaturePad--undo {
+  align-self: center;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #1a237e;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  outline: none;
 }

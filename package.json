@@ -39,6 +39,7 @@
     "react-dom": "^16.13.0",
     "react-dropzone": "^10.2.1",
     "react-scripts": "3.4.0",
+    "signature_pad": "^3.0.0-beta.3",
     "store2": "^2.10.0",
     "typescript": "~3.7.2"
   },
