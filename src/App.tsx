@@ -224,6 +224,8 @@ function App() {
       <div className="App--about">
         <p>
           Un outil créé par <a href="https://twitter.com/Etienne_dot_js">Etienne.js</a>
+          <br />
+          Code disponnible sur <a href="https://github.com/etienne-dldc/add-generator">Github</a>
         </p>
       </div>
     </div>
